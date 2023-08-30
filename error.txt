@@ -1,0 +1,68 @@
+# Common errors made in Java
+
+class main {			//class name should start with Uppercase
+    static int plus(){			// invalid return type 
+      System.out.println("just print");
+    }
+     static int plus(int x,int y){
+        return x+y;
+    }
+    public static void main(String[] args) {
+        plus();
+        plus(2,6);
+    }
+}
+
+Error:
+
+invalid return type 
+
+
+
+
+class main {
+    static plus(){			//missing return type
+      System.out.println("just print");
+    }
+     static int plus(int x,int y){
+        return x+y;
+    }
+    public static void main(String[] args) {
+        plus();
+        plus(2,6);
+    }
+}
+
+Error:
+/tmp/NTVqxHS6HX/Main.java:6: error: invalid method declaration; return type required
+    static plus(){
+           ^
+1 error
+
+
+
+
+
+class Main {
+    
+     static int plus(int x,int y){
+        return x+y;
+    }
+     static void  plus(){
+         System.out.println("just print");
+     }
+    public static void main(String[] args) {
+       
+        int z = plus(2,6);
+      System.out.println(z+ "\n");
+      plus();
+        
+    }
+}
+
+
+Output:
+
+8
+
+just print
